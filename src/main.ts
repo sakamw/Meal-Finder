@@ -4,7 +4,8 @@ const searchInput = document.getElementById("search") as HTMLInputElement;
 const searchButton = document.getElementById("search-btn") as HTMLButtonElement;
 const resultContainer = document.getElementById("result") as HTMLDivElement;
 
-const API_URL = "https://www.themealdb.com/api/json/v1/1/search.php?s=";
+const API_KEY = import.meta.env.VITE_MEALDB_API_KEY;
+const API_URL = `https://www.themealdb.com/api/json/v1/${API_KEY}/search.php?s=`;
 
 interface Meal {
   idMeal: string;
