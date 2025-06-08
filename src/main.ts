@@ -38,7 +38,7 @@ const displayMeals = (meals: Meal[] | null) => {
     mealCard.innerHTML = `
       <img src="${meal.strMealThumb}" alt="${meal.strMeal}" />
       <h2>${meal.strMeal}</h2>
-      <p>${meal.strInstructions.substring(0, 100)}</p>
+      <p>${meal.strInstructions}</p>
     `;
     resultContainer.appendChild(mealCard);
   });
